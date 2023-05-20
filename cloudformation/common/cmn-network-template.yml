@@ -104,3 +104,9 @@ Resources:
       SubnetId: !Ref PublicSubnetC
       RouteTableId: !Ref DefaultRouteTable
 
+  SSMVpcId: 
+      Type: AWS::SSM::Parameter
+      Properties:
+        Name: /cf-values/VpcId
+        Type: String
+        Value: !Ref TestVPC
